@@ -29,6 +29,5 @@ func SayHello() {
 		} else {
 			log.Printf("Hello Server response fail:%+v\n", helloResponse)
 		}
-
 	}
 }
