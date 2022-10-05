@@ -5,9 +5,10 @@
 package main
 
 import (
-	helloGrpc "github.com/qiaoshurui/go-learn/grpc-example/grpc-example-proto/pb/hello"
+	"fmt"
 	"github.com/qiaoshurui/go-learn/grpc-example/grpc-example-server/app/hello"
 	"google.golang.org/grpc"
+	helloGrpc "grpc-example-proto/pb/hello"
 	"log"
 	"net"
 )
@@ -25,14 +26,12 @@ func initGrpcServer() {
 
 	listen, err := net.Listen("tcp", grpcPort)
 	if err != nil {
-		log.Fatalf("Port port listen err:%+v", err)
-		return
+		panic(fmt.Sprintf("Port port listen err:%+v", err))
 	}
 
 	log.Printf("grpc server init... port%s", grpcPort)
 
 	if err = server.Serve(listen); err != nil {
-		log.Fatalf("Port server init err:%+v", err)
-		return
+		panic(fmt.Sprintf("Port server init err:%+v", err))
 	}
 }

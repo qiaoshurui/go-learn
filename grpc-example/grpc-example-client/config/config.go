@@ -4,6 +4,6 @@
 
 package config
 
-import helloGrpc "github.com/qiaoshurui/go-learn/grpc-example/grpc-example-proto/pb/hello"
+import helloGrpc "grpc-example-proto/pb/hello"
 
 var HelloGrpcClient helloGrpc.HelloClient

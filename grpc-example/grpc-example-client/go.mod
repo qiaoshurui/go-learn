@@ -2,9 +2,11 @@ module github.com/qiaoshurui/go-learn/grpc-example/grpc-example-client
 
 go 1.18
 
+replace grpc-example-proto v0.0.1 => github.com/qiaoshurui/go-learn/grpc-example/grpc-example-proto v0.0.0-20220930092846-bee87a58b594
+
 require (
-	github.com/qiaoshurui/go-learn/grpc-example/grpc-example-proto v0.0.0-20220930092846-bee87a58b594
 	google.golang.org/grpc v1.49.0
+	grpc-example-proto v0.0.1
 )
 
 require (

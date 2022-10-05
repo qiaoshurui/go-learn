@@ -9,7 +9,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/qiaoshurui/go-learn/grpc-example/grpc-example-client/config"
-	helloGrpc "github.com/qiaoshurui/go-learn/grpc-example/grpc-example-proto/pb/hello"
+	helloGrpc "grpc-example-proto/pb/hello"
 	"log"
 	"os"
 )
