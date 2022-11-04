@@ -36,7 +36,6 @@ func InitGrpcClient(cc *GrpcClientConfig) (*GrpcClient, error) {
 		log.Fatalf("Grpc client init err:%+v.", err)
 		return nil, err
 	}
-
 	return &GrpcClient{
 		Conn:   conn,
 		Config: cc,

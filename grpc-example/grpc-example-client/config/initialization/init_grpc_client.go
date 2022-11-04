@@ -24,9 +24,8 @@ func InitHelloGrpcClient() {
 	if err != nil {
 		panic(fmt.Sprintf("Grpc client init panic:%+v.", err))
 	}
-
 	log.Printf("hello grpc client init... port%s", grpcPort)
 
-	// 注册 hello grpc
+	// 注册 hello grpc 连接客户端和服务端
 	config.HelloGrpcClient = helloGrpc.NewHelloClient(grpcClient.Conn)
 }

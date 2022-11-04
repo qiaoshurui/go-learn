@@ -22,7 +22,6 @@ func SayHello() {
 		if err != nil {
 			log.Fatalf("grpc request err:%+v\n", err)
 		}
-
 		if helloResponse.Code == "I2000" {
 			log.Printf("Hello Server response:%+v\n", helloResponse)
 			fmt.Println(helloResponse.Data)
